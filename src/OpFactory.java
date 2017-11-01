@@ -5,7 +5,7 @@ public class OpFactory {
 	public OpFactory() {
 	}
 	
-	public static Calculate getCalc(TextField op1, TextField op2, String op) {
+	public Calculate getCalc(TextField op1, TextField op2, String op) {
 		if (op.equalsIgnoreCase("ADD")) {
 			return new Add(op1,op2);
 		}

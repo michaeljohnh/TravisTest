@@ -34,6 +34,7 @@ public class Calculator extends Application{
 	public void start(Stage stage) throws Exception {
 		stage.setTitle("Calculator");
 		label1 = new Label("My first labelllll ");
+		OpFactory opFactory = new OpFactory();
 		
 
 		GridPane grid = new GridPane();
@@ -76,7 +77,7 @@ public class Calculator extends Application{
             @Override
             public void handle(ActionEvent e) {
                 
-                result = OpFactory.getCalc(operand1,operand2,"ADD");
+                result = opFactory.getCalc(operand1,operand2,"ADD");
                 actiontarget.setText(result.calculate());
             }
         });
@@ -92,7 +93,7 @@ public class Calculator extends Application{
             @Override
             public void handle(ActionEvent e) {
 
-                result = OpFactory.getCalc(operand1,operand2,"SUBTRACT");
+                result = opFactory.getCalc(operand1,operand2,"SUBTRACT");
                 actiontarget.setText(result.calculate());
             }
         });
@@ -108,7 +109,7 @@ public class Calculator extends Application{
             @Override
             public void handle(ActionEvent e) {
 
-                result = OpFactory.getCalc(operand1,operand2,"MULTIPLY");
+                result = opFactory.getCalc(operand1,operand2,"MULTIPLY");
                 actiontarget.setText(result.calculate());
             }
         });
@@ -124,7 +125,7 @@ public class Calculator extends Application{
             @Override
             public void handle(ActionEvent e) {
             	
-                result = OpFactory.getCalc(operand1,operand2,"DIVIDE");
+                result = opFactory.getCalc(operand1,operand2,"DIVIDE");
                 actiontarget.setText(result.calculate());
             }
         });
